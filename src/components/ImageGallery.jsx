@@ -2,8 +2,8 @@ import { useState } from "react";
 import GridLayout, { Responsive, WidthProvider } from "react-grid-layout";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
-const TOTAL_IMAGES = 12;
-const IMAGES_PER_ROW = 3;
+const TOTAL_IMAGES = 11;
+const IMAGES_PER_ROW = 4;
 const layout = Array(TOTAL_IMAGES)
   .fill(null)
   .map((_, index) => ({
@@ -66,7 +66,7 @@ function ImageGallery() {
           xxs: dynamicLayout,
         }}
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-        cols={{ lg: 3, md: 3, sm: 3, xs: 3, xxs: 3 }}
+        cols={{ lg: 4, md: 4, sm: 3, xs: 3, xxs: 3 }}
         rowHeight={256}
         isResizable={false}
         compactType={"horizontal"}
@@ -91,7 +91,7 @@ function ImageGallery() {
           });
         }}
       >
-        {dynamicLayout.map((item) => {
+        {dynamicLayout.map((item, index) => {
           return (
             <div className="item" key={item.i}>
               <input
@@ -101,7 +101,7 @@ function ImageGallery() {
                 className="checkbox"
               />
               <img
-                src={`https://picsum.photos/500/500?random=${item.i}`}
+                src={`/images/image-${index + 1}.webp`}
                 alt="Gallery Image"
               />
             </div>
