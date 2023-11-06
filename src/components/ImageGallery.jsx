@@ -93,7 +93,12 @@ function ImageGallery() {
       >
         {dynamicLayout.map((item, index) => {
           return (
-            <div className="item" key={item.i}>
+            <div
+              className={`item ${
+                checkIfSelected(item.i) ? "item-selected" : ""
+              }`}
+              key={item.i}
+            >
               <input
                 type="checkbox"
                 checked={checkIfSelected(item.i)}
