@@ -45,9 +45,6 @@ function ImageGallery() {
       <h1 className="m-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
         Responsive Image Gallery
       </h1>
-      <p class="mb-6 text-lg text-center font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-        Reload browser to load random new images
-      </p>
       <div className="flex justify-center items-center">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
